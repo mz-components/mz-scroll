@@ -72,7 +72,7 @@ var Scroller = function() {
 			elemHeight = elem.offsetHeight,
 			elemOfsTop = $(elem).offset().top,
 			windowScrollTop = $(window).scrollTop(),
-			windowHeight = window.innerHeight,
+			windowHeight = window.innerHeight || document.documentElement.offsetHeight, // 兼容 IE
 			sizeInfo = {/*scrollOut, scrollIn*/};	
 
 		//console.log(elemOfsTop, windowScrollTop + windowHeight, preSize);
